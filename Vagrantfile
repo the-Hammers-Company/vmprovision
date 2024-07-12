@@ -68,6 +68,12 @@ Vagrant.configure("2") do |config|
   # View the documentation for the provider you are using for more
   # information on available options.
 
+  # From https://developer.hashicorp.com/vagrant/docs/vagrantfile/ssh_settings#config-ssh-forward_x11
+  # From https://developer.hashicorp.com/vagrant/docs/vagrantfile/ssh_settings#config-ssh-forward_agent
+  # Enable X11 forwarding
+  config.ssh.forward_agent=true
+  config.ssh.forward_x11=true
+
   # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
