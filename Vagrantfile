@@ -9,8 +9,29 @@ Vagrant.configure("2") do |config|
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
 
+
   # Every Vagrant development environment requires a box.
-  config.vm.box = "ubuntu/mantic64"
+  #
+  # From documentation: 
+  # https://developer.hashicorp.com/vagrant/docs/vagrantfile/machine_settings#config-vm-box_url
+  # config.vm.box_url (string, array of strings) - The URL that the 
+  # configured box can be found at. If config.vm.box is a shorthand
+  # to a box in HashiCorp's Vagrant Cloud then this value does not 
+  # need to be specified. Otherwise, it should point to the proper 
+  # place where the box can be found if it is not installed. This 
+  # can also be an array of multiple URLs. The URLs will be tried in order.
+  # Note that any client certificates, insecure download settings, and 
+  # so on will apply to all URLs in this list. The URLs can also be 
+  # local files by using the file:// scheme. For example: file://tmp/test.box.
+  #
+  # If using a box from a supplier other than HashiCorp, specify the URL and box 
+  #config.vm.box_url=""
+  #config.vm.box = ""
+  # 
+  # If using a box directly from HashiCorp, specify the box and optionally the version
+  # Hashicorp recommends Bento boxes: https://app.vagrantup.com/bento
+  config.vm.box = "bento/ubuntu-24.04"
+  config.vm.box_version = "202404.26.0"
 
   # Set the name of the VM instead of "default"
   config.vm.define "cfs_training"
