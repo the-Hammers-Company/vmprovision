@@ -16,6 +16,7 @@ apt-get install -y tcl-dev
 # Set up for X11 port forwarding
 apt-get install -y xauth
 apt-get install -y x11-apps
+apt-get install -y xterm
 # Install cFS Ground System build tools
 apt-get install -y python3-pyqt5
 apt-get install -y python3-zmq
