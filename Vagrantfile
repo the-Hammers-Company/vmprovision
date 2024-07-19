@@ -10,8 +10,7 @@ Vagrant.configure("2") do |config|
   # https://docs.vagrantup.com.
 
   # Every Vagrant development environment requires a box.
-  config.vm.box = "bento/ubuntu-24.04"
-  config.vm.box_version = "202404.26.0"
+  config.vm.box = "ubuntu/mantic64"
 
   # Set the name of the VM instead of "default"
   config.vm.define "cfs_training"
