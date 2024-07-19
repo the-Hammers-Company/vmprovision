@@ -41,7 +41,7 @@ Once it completes, you can ssh to the VM
 
 ## Connecting to the VM
 ### Without SSH forwarding
-To connect to the VM without X11 forwarding, simply run (from the vmprovision directory):
+To connect to the VM without X11 forwarding, simply run the vagrant ssh command (from the vmprovision directory):
 ```
 vagrant ssh
 ```
@@ -49,8 +49,13 @@ vagrant ssh
 This will connect you to the VM as user "vagrant".
 
 ### With SSH forwarding
-To connect to the VM with X11 forwarding in a Mac Terminal or Windows Powershell:
-In the vmprovision directory, run:
+To connect to the VM with X11 forwarding in Windows Powershell you must first set the DISPLAY environment and then (in the vmprovision directory) run the vagrant ssh command:
+```
+$env:DISPLAY="127.0.0.1:0.0"
+vagrant ssh -- -Y
+```
+
+To connect to the VM with X11 forwarding in a Mac Terminal, simply run the vagrant ssh command in the vmprovision directory:
 ```
 vagrant ssh -- -Y
 ```
