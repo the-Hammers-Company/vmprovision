@@ -30,8 +30,12 @@ Vagrant.configure("2") do |config|
   # 
   # If using a box directly from HashiCorp, specify the box and optionally the version
   # Hashicorp recommends Bento boxes: https://app.vagrantup.com/bento
+  # 
+  # The Ubuntu box we use is from:
+  #   https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04
+  # It should be checked periodically to see if we need to update the box_version.
   config.vm.box = "bento/ubuntu-24.04"
-  config.vm.box_version = "202404.26.0"
+  config.vm.box_version = "202502.21.0"
 
   # Set the name of the VM instead of "default"
   config.vm.define "cfs_training"
